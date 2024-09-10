@@ -1,0 +1,132 @@
+/* Container and overall layout */
+.my-services-container {
+    padding: 3rem;
+    background-color: #2D3142; /* Dark primary background */
+    color: #FFFFFF; /* White text color for readability */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeInContainer 1.5s ease-in-out forwards; /* Animation for the container */
+    text-align: center;
+}
+
+.my-services-title {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    color: #F7C54F; /* Gold color for title */
+    font-weight: bold;
+}
+
+.my-services-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Service card styling */
+.service-card {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0; /* Set opacity to 0 initially */
+    animation: fadeInUp 1.5s ease-in-out forwards; /* Animation for the service card */
+}
+
+.service-title {
+    color: #2D3142;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.service-description {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Button styling */
+.service-button {
+    background-color: #F7C54F;
+    color: #2D3142;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Initial shadow for the button */
+}
+
+/* Button hover effects for Book Now and Hire Me */
+.service-button:hover {
+    background-color: #e6a645; /* Default hover effect for both */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Different hover effects for Book Now */
+.service-button:hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f08a24; /* More orange for 'Book Now' */
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Different hover effects for Hire Me */
+.service-button:hover:before {
+    background-color: #c18418; /* Slightly different shade for 'Hire Me' */
+}
+
+/* Hover effect for service card */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInContainer {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .my-services-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2rem;
+    }
+
+    .service-card {
+        flex: 1 1 calc(45% - 2rem);
+    }
+}
+
+@media (min-width: 1200px) {
+    .service-card {
+        flex: 1 1 calc(30% - 2rem);
+    }
+}

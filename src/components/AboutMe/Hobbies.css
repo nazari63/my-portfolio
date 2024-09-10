@@ -1,0 +1,108 @@
+/* src/components/AboutMe/Hobbies.css */
+
+.hobbies-container {
+    padding: 2rem;
+    background-color: #f5f5f5; /* Light background for contrast */
+    color: #2D3142; /* Dark text for readability */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease-in-out;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .hobbies-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #D4AF37; /* Primary color from your palette */
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .hobbies-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background-color: gold; /* Accent color */
+    border-radius: 2px;
+  }
+  
+  .hobbies-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .hobby-item {
+    background-color: #ffffff; /* White background for each hobby item */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hobby-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color:#2D3142; /* Accent color */
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9; /* Slightly different background on hover */
+  }
+  
+  .hobby-item h3 {
+    color: #2D3142; /* Primary color from your palette */
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+  }
+  
+  .hobby-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+  }
+  
+  @media (min-width: 768px) {
+    .hobbies-content {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  
+    .hobby-item {
+      flex: 1 1 calc(50% - 1rem); /* Two items per row */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .hobby-item {
+      flex: 1 1 calc(25% - 1.5rem); /* Four items per row */
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

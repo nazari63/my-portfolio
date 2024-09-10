@@ -1,0 +1,222 @@
+/* General Header Styles */
+.header {
+  width: 100%;
+  background-color: #2D3142;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 68px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 52px;
+  margin-right: 5px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #FFD700;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.logo a:hover {
+  color: #FA8072;
+}
+
+/* Content below the header */
+body, .App {
+  padding-top: 30px;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #FFD700;
+}
+
+.nav-links .active {
+  border-bottom: 2px solid #FFD700;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.dropdown-button:hover {
+  color: #FFD700;
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2D3142;
+  border: 1px solid #FFD700;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 200px;
+}
+
+.dropdown-menu a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 10px 0;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.dropdown-menu a:hover {
+  color: #FFD700;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* Burger Menu for Mobile */
+.burger {
+  display: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #FFD700;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Animations */
+.burger.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+  opacity: 0;
+}
+
+.burger.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .nav-links {
+    position: fixed;
+    right: 0;
+    top: 68px; /* Adjust this to match the height of the header */
+    height: calc(100vh - 68px);
+    width: 250px;
+    background-color: #2D3142;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    transform: translateX(0%);
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+    width: 100%; /* Make links full width */
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 10px 15px; /* Add padding for clickable area */
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 24px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .burger div {
+    width: 20px;
+    height: 2px;
+  }
+}

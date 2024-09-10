@@ -1,0 +1,119 @@
+/* src/components/AboutMe/Bio.css */
+
+.bio-container {
+    padding: 40px;
+    background-color: #2D3142; /* Dark background for contrast */
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    max-width: 1000px;
+    animation: fadeInContainer 1.5s ease-in-out;
+}
+
+.bio-content {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+    color: #2D3142;
+}
+
+.bio-content h1 {
+    font-size: 2.5em;
+    color: #D4AF37; /* Gold color for name */
+    margin-bottom: 30px;
+    text-align: left;
+    font-family: 'Merriweather', serif; /* Elegant font */
+    letter-spacing: 1px;
+}
+
+.bio-introduction, 
+.bio-content p {
+    font-size: 1.2em;
+    color: #2D3142;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.bio-content ul {
+    list-style-type: none; /* Removing default list style */
+    padding-left: 0;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bio-content li {
+    font-size: 1.1em;
+    color: #5D2876; /* Complementary accent color */
+    background-color: #F4E3B2; /* Soft gold background for skills */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.bio-content li strong {
+    color: #D4AF37; /* Gold color for skill titles */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .bio-container {
+        padding: 20px;
+    }
+
+    .bio-content {
+        padding: 20px;
+    }
+
+    .bio-content h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .bio-content p,
+    .bio-content li {
+        font-size: 1em;
+    }
+
+    .bio-content ul {
+        gap: 8px;
+    }
+}

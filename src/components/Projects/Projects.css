@@ -1,0 +1,172 @@
+/* Projects.css */
+.projects-section {
+  padding: 2rem;
+  background-color: #ffffff; /* White background */
+  animation: fadeIn 1s ease-out;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2D3142; /* Dark Blue-Grey */
+  font-weight: bold;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch; /* Ensures all cards are the same height */
+}
+
+.project-card {
+  width: 100%;
+  max-width: 320px;
+  height: 300px; /* Set a uniform height */
+  background-color: #ffffff;
+  border: 2px solid gold; /* Gold border for standout effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: slideInUp 0.6s ease-out;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out content vertically */
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-color: #DAA520; /* Darker gold on hover */
+}
+
+.project-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+  color: #2D3142; /* Dark Blue-Grey */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  flex-grow: 1; /* Allow the description to take up remaining space */
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #2D3142; /* Button with primary color */
+  border-radius: 50px; /* Rounded button */
+  text-decoration: none;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+  align-self: flex-start; /* Align the link button to the bottom */
+  cursor: pointer; /* Ensure button has a pointer cursor */
+}
+
+.project-link:hover {
+  background-color: #FFD700; /* Gold hover */
+  transform: scale(1.1);
+  color: #2D3142;
+  text-decoration: none; /* Remove underline on hover */
+}
+
+button.project-link {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+button.project-link:hover {
+  background-color: #FFD700; /* Gold hover for button */
+  transform: scale(1.1);
+  color: #2D3142;
+}
+
+/* Hover effects for the project card */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background-color: gold;
+  transition: height 0.4s ease;
+}
+
+.project-card:hover::before {
+  height: 100%;
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.close-button {
+  padding: 0.5rem 1rem;
+  background-color: #2D3142;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #FFD700;
+  color: #2D3142;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

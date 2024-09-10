@@ -1,0 +1,223 @@
+/* General Footer Styles */
+.footer {
+  width: 100%;
+  background-color: #2D3142;
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+  border-top: 3px solid #FFD700;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Footer Container */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Footer Sections */
+.footer-about,
+.footer-info,
+.footer-services {
+  flex: 1;
+  min-width: 220px;
+  margin: 10px; /* Reduced margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Ensuring consistent vertical alignment for text */
+.footer-about p,
+.footer-info p,
+.footer-services ul {
+  margin: 5px 0; /* Reduced margin */
+}
+
+/* Align contact information vertically */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start */
+}
+
+.footer-info .contact-item {
+  margin-bottom: 10px; /* Spacing between contact items */
+}
+
+.footer-title {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #FFD700;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Footer Subtitles */
+.footer-subtitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+/* Footer Text */
+.footer-text {
+  font-size: 16px;
+  margin: 5px 0; /* Reduced margin */
+  color: #f4f4f4;
+  line-height: 1.5;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.footer-text a {
+  color: #FFD700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-text a:hover {
+  color: #4788e9;
+}
+
+/* Footer Links */
+.footer-list-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px; /* Reduced space below the list container */
+}
+
+.footer-list-section {
+  width: 30%;
+  text-align: left;
+  margin-right: 20px; /* Reduced margin-right */
+}
+
+/* Add specific margin to sub-category sections */
+.footer-list-section.professional {
+  margin-right: 20px; /* Adjusted value */
+}
+
+.footer-list-section.other {
+  margin-right: 0; /* No margin for the last section */
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+.footer-list li {
+  margin: 5px 0; /* Reduced margin */
+}
+
+.footer-list a {
+  color: #f4f4f4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-list a:hover {
+  color: #FFD700;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  animation: fadeIn 1.6s ease-in-out;
+}
+
+.social-icon {
+  font-size: 24px;
+  margin: 0 8px; /* Reduced margin */
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #FFD700;
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #f4f4f4;
+  animation: fadeIn 1.8s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center align items */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .footer-about,
+  .footer-info,
+  .footer-services {
+    text-align: center; /* Center text in sections */
+    margin-bottom: 30px; /* Add space between sections */
+  }
+
+  .footer-title {
+    font-size: 20px; /* Adjust title font size */
+  }
+
+  .footer-list-container {
+    flex-direction: column; /* Stack footer lists vertically */
+    align-items: center; /* Center footer lists */
+  }
+
+  .footer-list-section {
+    width: 100%; /* Make sections full width */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add space below each section */
+  }
+
+  .footer-bottom {
+    font-size: 12px; /* Adjust bottom font size */
+  }
+
+  .social-icon {
+    font-size: 20px; /* Adjust social icon size */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-title {
+    font-size: 18px; /* Further reduce title font size */
+  }
+
+  .footer-text {
+    font-size: 14px; /* Reduce footer text size */
+  }
+
+  .social-icon {
+    font-size: 18px; /* Adjust social icon size */
+  }
+}

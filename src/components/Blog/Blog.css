@@ -1,0 +1,188 @@
+/* Blog.css */
+.blog-container {
+  padding: 2rem;
+  background-color: #ffffff; /* White background */
+  animation: fadeIn 1s ease-out;
+}
+
+.blog-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2D3142; /* Primary color */
+  margin-bottom: 1.5rem;
+  animation: slideInFromTop 0.5s ease-out;
+  font-weight: bold;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive layout */
+  gap: 2rem;
+  align-items: start; /* Align vertically */
+}
+
+.blog-post {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid gold; /* Gold border for a luxurious feel */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px; /* Fixed height for uniform sizing */
+}
+
+.blog-post:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border-color: #2D3142; /* Changes border on hover */
+}
+
+.blog-post-image {
+  width: 100%;
+  height: 200px; /* Consistent image size */
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.blog-post-image:hover {
+  opacity: 0.9; /* Slight hover effect on the image */
+}
+
+.blog-post-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  animation: contentFadeIn 1s ease-in-out; /* Animation for content */
+}
+
+.blog-post-title {
+  font-size: 1.75rem;
+  color: #2D3142; /* Primary color */
+  margin: 0 0 1rem 0;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.blog-post-title:hover {
+  color: gold; /* Hover effect on the title */
+}
+
+.blog-post-date {
+  font-size: 0.9rem;
+  color: #777; /* Muted text color */
+  margin-bottom: 1rem;
+}
+
+.blog-post-excerpt {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Prevent text from overflowing */
+}
+
+.read-more-button {
+  background-color: gold; /* Gold button */
+  color: #2D3142;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+}
+
+.read-more-button:hover {
+  background-color: #2D3142;
+  color: gold;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+      transform: translateY(-20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes contentFadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .blog-title {
+    font-size: 2rem; /* Adjust title font size */
+  }
+
+  .blog-posts {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust for smaller screens */
+  }
+
+  .blog-post {
+    height: auto; /* Allow height to be dynamic */
+  }
+
+  .blog-post-title {
+    font-size: 1.5rem; /* Adjust post title font size */
+  }
+
+  .blog-post-date {
+    font-size: 0.8rem; /* Adjust date font size */
+  }
+
+  .blog-post-excerpt {
+    font-size: 0.9rem; /* Adjust excerpt font size */
+  }
+
+  .read-more-button {
+    padding: 0.5rem 1rem; /* Adjust button padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-title {
+    font-size: 1.75rem; /* Further reduce title font size */
+  }
+
+  .blog-post-title {
+    font-size: 1.25rem; /* Further reduce post title font size */
+  }
+
+  .blog-post-excerpt {
+    font-size: 0.85rem; /* Further reduce excerpt font size */
+  }
+
+  .read-more-button {
+    font-size: 0.9rem; /* Adjust button font size */
+  }
+}

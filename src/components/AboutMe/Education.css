@@ -1,0 +1,93 @@
+/* src/components/AboutMe/Education.css */
+
+.education-container {
+    padding: 2rem;
+    background-color: #f5f5f5; /* Light background for contrast */
+    color: #2D3142; /* Dark text for readability */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1.2s ease-in-out;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .education-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #2D3142; /* Primary color from your palette */
+    font-weight: bold;
+  }
+  
+  .education-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .education-item {
+    background-color: #ffffff; /* White background for each education item */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .education-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #FFD700; /* Primary color as a vertical accent line */
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .education-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .education-item h3 {
+    color: #2D3142; /* Darker color for headings */
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+  }
+  
+  .education-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+  }
+  
+  @media (min-width: 768px) {
+    .education-content {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  
+    .education-item {
+      flex: 1 1 calc(50% - 1rem); /* Two items per row */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .education-item {
+      flex: 1 1 calc(25% - 1.5rem); /* Four items per row */
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

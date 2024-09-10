@@ -1,0 +1,147 @@
+/* General Hero Section Styles */
+.hero-section {
+  width: 100%;
+  height: 80vh; /* Reduced height to 60% of the viewport height */
+  background: url('/src/assets/images/756edb8e-48ab-4104-8732-630e5937b74d.webp') no-repeat center center/cover;
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  align-items: center;
+  position: relative;
+  padding-top: 60px; /* Ensure content isn't blocked by the header */
+}
+
+/* Floating Plate with Content */
+.hero-content {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background for better readability */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  max-width: 60%; /* Adjusted width */
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  position: absolute; /* Position it relative to the section */
+  top: 50%; /* Position it vertically in the middle */
+  left: 5%; /* Move it more towards the left */
+  transform: translateY(-50%); /* Center it vertically */
+}
+
+/* Passport Photo Styling */
+.hero-photo {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.hero-photo img {
+  border-radius: 50%; /* Circular photo */
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+}
+
+/* Hero Text Styling */
+.hero-text {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column; /* Ensure vertical alignment */
+  justify-content: center; /* Center vertically */
+}
+
+.hero-title {
+  font-size: 36px; /* Adjusted size */
+  margin-bottom: 10px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+  color: #FFD700; /* Gold color for the title */
+  text-align: left; /* Align text to the left */
+}
+
+.hero-description {
+  font-size: 16px; /* Adjusted size */
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-in-out forwards;
+  text-align: left; /* Align text to the left */
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 8px 16px; /* Reduced padding */
+  font-size: 16px; /* Reduced font size */
+  color: #ffffff;
+  background-color: #2D3142; /* Dark background color */
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid transparent; /* Transparent border initially */
+  transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #FFD700; /* Gold color on hover */
+  border-color: #FFD700; /* Gold border on hover */
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    font-size: 14px; /* Adjusted font size for smaller screens */
+    padding: 6px 12px; /* Adjusted padding for smaller screens */
+  }
+
+  .hero-content {
+    flex-direction: column; /* Stack photo and text vertically on small screens */
+    align-items: center;
+    max-width: 90%; /* Adjusted width on small screens */
+    top: 40%; /* Adjust vertical positioning */
+    left: 0; /* Center horizontally */
+    transform: translateY(0); /* Remove vertical centering transform */
+  }
+
+  .hero-photo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-description {
+    font-size: 12px;
+  }
+
+  .cta-button {
+    font-size: 12px; /* Further reduced font size for extra small screens */
+    padding: 4px 8px; /* Further reduced padding for extra small screens */
+  }
+
+  .hero-photo img {
+    width: 120px; /* Smaller photo for extra small screens */
+    height: 120px;
+  }
+}

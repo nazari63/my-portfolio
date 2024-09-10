@@ -1,0 +1,99 @@
+/* Skills.css */
+.skills-section {
+  padding: 2rem;
+  background-color: #ffffff; /* White background container */
+  animation: fadeIn 1s ease-out;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff; /* White container */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow for a standout effect */
+  padding: 2rem;
+  animation: slideInUp 0.7s ease-out;
+}
+
+.skills-title {
+  font-size: 3rem;
+  color: #2D3142; /* Dark header */
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Letter spacing for elegance */
+}
+
+.skills-category {
+  margin-bottom: 2.5rem;
+}
+
+.category-title {
+  font-size: 2.2rem;
+  color: #2D3142; /* Dark color */
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #6EC1E4; /* Gold border for category */
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Increased min width for better spacing */
+  gap: 1.5rem;
+}
+
+.skill-item {
+  font-size: 1.2rem;
+  color: #2D3142;
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.skill-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background-color: gold; /* Left gold highlight */
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.skill-item:hover {
+  background-color: #2D3142; /* Gold hover effect */
+  color: #fff;
+  transform: scale(1.07); /* Enlarged hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}

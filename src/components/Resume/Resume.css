@@ -1,0 +1,171 @@
+/* Resume.css */
+.resume-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #2D3142, #2D3142);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 3rem 2rem;
+  position: relative;
+  animation: slideInUp 0.7s ease-out;
+}
+
+.resume-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.passport-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid #FFD700;
+  object-fit: cover;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.name {
+  font-size: 3rem;
+  color: #2D3142;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.contact-info {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.contact-info a {
+  color: blue;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.links {
+  font-size: 1.1rem;
+  margin-top: 0.7rem;
+}
+
+.links a {
+  color: blue;
+  margin: 0 0.7rem;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.resume-summary,
+.resume-experience,
+.resume-skills,
+.resume-education,
+.resume-certifications {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: #2D3142;
+  margin-bottom: 1.2rem;
+  border-bottom: 3px solid #FFD700;
+  padding-bottom: 0.7rem;
+}
+
+.experience-item,
+.education-item {
+  margin-bottom: 1.7rem;
+}
+
+.company,
+.dates,
+.year {
+  font-style: italic;
+  color: #888;
+}
+
+.resume-skills ul,
+.resume-certifications ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resume-skills ul li,
+.resume-certifications ul li {
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  color: #2D3142;
+}
+
+.download-link {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #2D3142;
+  border-radius: 7px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.download-link:hover {
+  background-color: #FFD700;
+  color: #2D3142;
+  animation: pulse 1.5s infinite;
+}
+
+/* Vertical alignment styling */
+.resume-header, .resume-summary, .resume-experience, .resume-skills, .resume-education, .resume-certifications {
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}

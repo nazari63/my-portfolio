@@ -1,0 +1,111 @@
+/* ContactForm.css */
+.contact-form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff; /* White background */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(45, 49, 66, 0.2); /* Soft shadow */
+  animation: fadeIn 1.2s ease-out;
+}
+
+.contact-form-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #2D3142; /* Dark shade */
+  font-weight: bold;
+  animation: slideInFromTop 0.8s ease-out;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  color: #2D3142;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  color: #2D3142; /* Text color */
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+  border-color: #FFD700; /* Gold hover border */
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.4); /* Soft gold glow */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #FFD700; /* Gold when focused */
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+  outline: none;
+}
+
+.submit-button {
+  background-color: #2D3142; /* Gold */
+  color: #fff;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: center;
+}
+
+.submit-button:hover {
+  background-color: #FFD700; /* Dark hover */
+  color: #2D3142; /* Gold text on hover */
+  transform: scale(1.05);
+}
+
+.form-status {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #2D3142;
+  margin-top: 1.5rem;
+  animation: fadeIn 1.2s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
