@@ -3,7 +3,7 @@ import './Resume.css';
 import passportPhoto from '../../assets/images/passport photo.jpg'; // Replace with the actual path
 
 // Your resume PDF link
-const resumePdfLink = "https://drive.google.com/file/d/1v-zK-0_hzAfmzk3iZCFbQqpVSN9Fo3cF/view?usp=drive_link"; // Update this with the actual link
+const resumePdfLink = "https://drive.google.com/file/d/1N_eg8bpvxhmZJZ-L0JdzrauTlSiWcReH/view?usp=sharing"; // Update this with the actual link
 
 const Resume = () => {
   return (
@@ -32,9 +32,22 @@ const Resume = () => {
           <h2>Experience</h2>
           {[
             {
+              title: "Collaborative Partner & Software Engineer",
+              company: "IWL Partners – South Korea",
+              dates: "November 2024 – Present",
+              responsibilities: [
+                "Lead and contribute to software development projects, delivering robust and efficient code for production systems.",
+                "Collaborate with cross-functional teams using Agile methodologies to ensure successful project delivery.",
+                "Leverage expertise in full-stack development and DevOps practices to streamline development and deployment pipelines.",
+                "Implement DevOps practices including CI/CD pipelines and automated testing to streamline development processes and enhance operational efficiency.",
+                "Integrate AI technologies to develop intelligent systems, utilizing machine learning models to drive innovation and data-driven decision making.",
+                "Mentor and guide junior developers, fostering a culture of continuous learning and enhancing team productivity."
+              ]
+            },
+            {
               title: "Software Engineer & Lead Developer",
               company: "Harmosoft - Nairobi, Kenya",
-              dates: "January 2024 – Present",
+              dates: "August 2023 – October 2024",
               responsibilities: [
                 "Spearhead software development initiatives as a lead developer, delivering robust and efficient code, ensuring project success.",
                 "Collaborate effectively with cross-functional teams, utilizing Agile methodologies to drive successful project outcomes.",
